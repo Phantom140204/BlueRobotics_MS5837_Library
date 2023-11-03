@@ -52,8 +52,8 @@ public:
 
 	MS5837();
 
-	bool init(TwoWire &wirePort = Wire);
-	bool begin(TwoWire &wirePort = Wire); // Calls init()
+	bool init(TwoWire *wirePort = &Wire);
+	bool begin(TwoWire *wirePort = &Wire); // Calls init()
 
 	/** Set model of MS5837 sensor. Valid options are MS5837::MS5837_30BA (default)
 	 * and MS5837::MS5837_02BA.
